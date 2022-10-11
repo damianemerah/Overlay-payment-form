@@ -1,0 +1,261 @@
+$color-primary: #67b2ae;
+$color_secondary: #75f5b8;
+$color-primary-light: rgba($color-primary, 0.05);
+$color-dark: rgba(#000, 0.5);
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  background-color: $color-primary-light;
+}
+
+.container {
+  display: flex;
+  //   width: 100%;
+  //   min-height: 100;
+  position: relative;
+}
+
+.order {
+  flex: 0 0 58.1rem;
+  padding-top: 6.4rem;
+  padding-right: 4.5rem;
+  padding-left: 7.5rem;
+  background-color: #fff;
+
+  h1 {
+    text-align: center;
+  }
+
+  h1,
+  h2 {
+    font-size: 4rem;
+    color: $color-primary;
+  }
+  &__summary {
+    background-color: $color-primary-light;
+    border-radius: 30px;
+    padding: 4rem 2.3rem 9rem 3rem;
+  }
+
+  &__list {
+    &-item {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $color-dark;
+      padding-bottom: 2rem;
+      margin-top: 3.6rem;
+      &-img {
+        width: 6.2rem;
+        height: 5.6rem;
+        margin-right: 1.9rem;
+      }
+    }
+  }
+
+  p {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+  }
+
+  .price {
+    margin-left: auto;
+  }
+
+  .total {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+
+    h2 {
+      margin-left: auto;
+    }
+  }
+}
+
+.pay {
+  flex: 1;
+  display: flex;
+  padding-top: 6.4rem;
+  padding-right: 12rem;
+  padding-left: 7.2rem;
+  padding-bottom: 5.8rem;
+  background-color: #fff;
+  border-left: 1rem solid $color-primary-light;
+
+  &__merchant-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6.8rem;
+
+    & > * {
+      margin-right: 4.4rem;
+      border-radius: 30px;
+    }
+  }
+
+  &__merchant {
+    transition: all 0.4s;
+  }
+
+  &__address {
+    border-bottom: 1px solid $color-dark;
+    padding-bottom: 3.9rem;
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      font-weight: 600;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+  }
+
+  .form {
+    &__group {
+      margin-top: 4.9rem;
+
+      &--sm {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    &__input:placeholder-shown + .form__label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10rem);
+    }
+
+    &__label {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-left: 4rem;
+      display: inline-block;
+      background-color: #fff;
+      transform: translateY(-10rem);
+      padding: 1rem;
+      transition: all 0.5s;
+    }
+
+    &__input {
+      width: 100%;
+      height: 7rem;
+      border-radius: 0.5rem;
+      border: none;
+      outline: none;
+      padding: 2rem 4rem;
+      font-family: inherit;
+      font-size: 1.6rem;
+      background-color: $color-primary-light;
+
+      &:focus:invalid {
+        border-bottom: 3px solid $color-secondary;
+      }
+    }
+
+    &__date,
+    &__cvv {
+      width: 31.4rem;
+    }
+
+    .btn {
+      font-family: inherit;
+      font-size: 2rem;
+      border-radius: 20px;
+      padding: 2rem 10.2rem;
+      border: none;
+      outline: none;
+
+      &--cancel {
+        color: $color-primary;
+        border: 4px solid $color-primary;
+      }
+
+      &--finish {
+        background-color: $color-primary;
+        color: #fff;
+      }
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8.4rem;
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0005;
+  backdrop-filter: blur(8px);
+  display: none;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 400;
+  }
+
+  img {
+    width: 6.56rem;
+    height: 6.56rem;
+    margin: 0 auto;
+  }
+
+  .order__success {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 10rem 10rem;
+
+    & > * {
+      margin-bottom: 5rem;
+    }
+    p {
+      font-size: 2rem;
+    }
+
+    .thank-you {
+      font-size: 3rem;
+    }
+
+    .btn {
+      font-family: inherit;
+      font-size: 2rem;
+      padding: 3.3rem 7.5rem;
+      border: none;
+      outline: none;
+      background-color: $color-primary;
+      color: #fff;
+    }
+  }
+}
+
+.selected {
+  border: 2px solid $color_secondary;
+  transform: scale(1.1);
+}

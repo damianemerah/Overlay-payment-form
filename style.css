@@ -1,0 +1,231 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  background-color: rgba(103, 178, 174, 0.05);
+}
+
+.container {
+  display: flex;
+  position: relative;
+}
+
+.order {
+  flex: 0 0 58.1rem;
+  padding-top: 6.4rem;
+  padding-right: 4.5rem;
+  padding-left: 7.5rem;
+  background-color: #fff;
+}
+.order h1 {
+  text-align: center;
+}
+.order h1,
+.order h2 {
+  font-size: 4rem;
+  color: #67b2ae;
+}
+.order__summary {
+  background-color: rgba(103, 178, 174, 0.05);
+  border-radius: 30px;
+  padding: 4rem 2.3rem 9rem 3rem;
+}
+.order__list-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  padding-bottom: 2rem;
+  margin-top: 3.6rem;
+}
+.order__list-item-img {
+  width: 6.2rem;
+  height: 5.6rem;
+  margin-right: 1.9rem;
+}
+.order p {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.8rem;
+}
+.order .price {
+  margin-left: auto;
+}
+.order .total {
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+}
+.order .total h2 {
+  margin-left: auto;
+}
+
+.pay {
+  flex: 1;
+  display: flex;
+  padding-top: 6.4rem;
+  padding-right: 12rem;
+  padding-left: 7.2rem;
+  padding-bottom: 5.8rem;
+  background-color: #fff;
+  border-left: 1rem solid rgba(103, 178, 174, 0.05);
+}
+.pay__merchant-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6.8rem;
+}
+.pay__merchant-box > * {
+  margin-right: 4.4rem;
+  border-radius: 30px;
+}
+.pay__merchant {
+  transition: all 0.4s;
+}
+.pay__address {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  padding-bottom: 3.9rem;
+}
+.pay__address h3 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+.pay__address p {
+  font-size: 1.6rem;
+}
+.pay .form__group {
+  margin-top: 4.9rem;
+}
+.pay .form__group--sm {
+  display: flex;
+  justify-content: space-between;
+}
+.pay .form__input:-moz-placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10rem);
+}
+.pay .form__input:-ms-input-placeholder + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10rem);
+}
+.pay .form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10rem);
+}
+.pay .form__label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-left: 4rem;
+  display: inline-block;
+  background-color: #fff;
+  transform: translateY(-10rem);
+  padding: 1rem;
+  transition: all 0.5s;
+}
+.pay .form__input {
+  width: 100%;
+  height: 7rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  padding: 2rem 4rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+  background-color: rgba(103, 178, 174, 0.05);
+}
+.pay .form__input:focus:invalid {
+  border-bottom: 3px solid #75f5b8;
+}
+.pay .form__date, .pay .form__cvv {
+  width: 31.4rem;
+}
+.pay .form .btn {
+  font-family: inherit;
+  font-size: 2rem;
+  border-radius: 20px;
+  padding: 2rem 10.2rem;
+  border: none;
+  outline: none;
+}
+.pay .form .btn--cancel {
+  color: #67b2ae;
+  border: 4px solid #67b2ae;
+}
+.pay .form .btn--finish {
+  background-color: #67b2ae;
+  color: #fff;
+}
+.pay .form__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8.4rem;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3333333333);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  display: none;
+}
+.overlay h1 {
+  font-size: 4rem;
+  font-weight: 400;
+}
+.overlay img {
+  width: 6.56rem;
+  height: 6.56rem;
+  margin: 0 auto;
+}
+.overlay .order__success {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 10rem 10rem;
+}
+.overlay .order__success > * {
+  margin-bottom: 5rem;
+}
+.overlay .order__success p {
+  font-size: 2rem;
+}
+.overlay .order__success .thank-you {
+  font-size: 3rem;
+}
+.overlay .order__success .btn {
+  font-family: inherit;
+  font-size: 2rem;
+  padding: 3.3rem 7.5rem;
+  border: none;
+  outline: none;
+  background-color: #67b2ae;
+  color: #fff;
+}
+
+.selected {
+  border: 2px solid #75f5b8;
+  transform: scale(1.1);
+}/*# sourceMappingURL=style.css.map */
